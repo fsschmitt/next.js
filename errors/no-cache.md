@@ -84,8 +84,7 @@ with:
   # Generate a new cache whenever packages or source files change.
   key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
   # If source files changed but packages didn't, rebuild from a prior cache.
-  restore-keys: |
-    ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+  restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
 ```
 
 #### Bitbucket Pipelines
